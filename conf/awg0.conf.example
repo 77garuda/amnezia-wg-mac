@@ -1,0 +1,28 @@
+# AmneziaWG client config - copy to awg0.conf and fill in your real values.
+# The interface name is the filename before ".conf" (max 15 chars).
+
+[Interface]
+PrivateKey = <YOUR_CLIENT_PRIVATE_KEY>
+Address = 10.11.0.6/32
+DNS = 1.1.1.1
+MTU = 1280
+
+# Custom extension
+ExcludeIPs = 192.168.0.0/24
+
+# AmneziaWG obfuscation parameters - must match the server exactly:
+Jc = 4
+Jmin = 8
+Jmax = 80
+S1 = 50
+S2 = 100
+H1 = <H1_FROM_SERVER>
+H2 = <H2_FROM_SERVER>
+H3 = <H3_FROM_SERVER>
+H4 = <H4_FROM_SERVER>
+
+[Peer]
+PublicKey = <SERVER_PUBLIC_KEY>
+Endpoint = <SERVER_IP>:443
+AllowedIPs = 0.0.0.0/0
+PersistentKeepalive = 25

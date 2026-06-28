@@ -1,0 +1,22 @@
+amnezia-wg-macos - license notice
+==================================
+
+This repository aggregates and patches two upstream projects. Each component
+keeps its own license; nothing here relicenses upstream code.
+
+  - src/amneziawg-go      - MIT (WireGuard LLC).  See src/amneziawg-go/LICENSE
+  - src/amneziawg-tools   - GPL-2.0.              See src/amneziawg-tools/COPYING
+
+The only modification made by this repository is a patch to the macOS bring-up
+script:
+
+  src/amneziawg-tools/src/wg-quick/darwin.bash
+
+That file is part of amneziawg-tools and therefore remains under **GPL-2.0**.
+The patch (socket-directory alignment to /var/run/amneziawg and wg->awg call
+rename) is likewise released under GPL-2.0.
+
+The Makefile, README.md, docs/, and config examples in this repository are
+released under GPL-2.0 as well.
+
+All original copyrights are retained by their respective owners.

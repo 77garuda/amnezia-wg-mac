@@ -1,0 +1,19 @@
+# build outputs
+/bin/
+/build/
+
+# real configs carry private keys - never commit them
+conf/*.conf
+!conf/*.conf.example
+
+# compiled artifacts inside vendored sources
+src/amneziawg-go/amneziawg-go
+src/amneziawg-tools/src/*.o
+src/amneziawg-tools/src/wg
+src/amneziawg-tools/src/wg-quick/wg-quick
+
+# session handoff (local notes, not for the repo)
+HANDOFF.md
+
+# macOS
+.DS_Store
